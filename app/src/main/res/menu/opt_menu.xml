@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_newGroup"
+        android:title="New group"
+        />
+
+    <item
+        android:id="@+id/app_bar_StarredMessages"
+        android:title="Starred messages"
+        />
+
+    <item
+        android:id="@+id/app_bar_MyAccount"
+        android:title="My account"/>
+    <item
+        android:id="@+id/app_bar_camera"
+        android:icon="@drawable/baseline_photo_camera_24"
+        android:title="@string/camera"
+        app:showAsAction="ifRoom"
+         />
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/search"
+        app:showAsAction="always|collapseActionView"
+
+         />
+</menu>

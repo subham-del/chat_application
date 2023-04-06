@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MyAccount">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/AppBar"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:layout_marginBottom="@dimen/_23sdp">
+
+        <RelativeLayout
+            android:id="@+id/Relative_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profilePic"
+                android:layout_width="200dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="200dp"
+                android:src="@drawable/baseline_account_circle_24"
+                app:civ_shadow_radius="10dp"
+               />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/camera"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/rounded_button"
+                android:layout_alignEnd="@+id/profilePic"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_alignBottom="@+id/profilePic"
+                android:src="@drawable/baseline_photo_camera_24" />
+
+
+        </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Relative_lay"
+                android:layout_marginTop="@dimen/_23sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeColor="@color/white"
+                app:startIconDrawable="@drawable/baseline_person_24"
+                app:hintTextColor="@color/dark_grey"
+                android:hint="@string/name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="@dimen/_23sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeColor="@color/white"
+                app:startIconDrawable="@drawable/baseline_info_24"
+                app:hintTextColor="@color/dark_grey"
+                android:hint="@string/about">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aboutText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about"
+                android:layout_marginTop="@dimen/_23sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeColor="@color/white"
+                app:startIconDrawable="@drawable/baseline_phone_24"
+                app:hintTextColor="@color/dark_grey"
+                android:hint="Phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/number"
+                    android:cursorVisible="false"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

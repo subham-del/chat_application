@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetInfoActivity">
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/AppBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="0dp">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleCentered="true"
+        />
+
+</com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <com.google.android.material.textview.MaterialTextView
+
+                android:id="@+id/hintText"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_13sdp"
+                android:textAlignment="center"
+                android:text="Please provide your name and an optional profile photo"/>
+            <RelativeLayout
+                android:id="@+id/Relative_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hintText"
+                android:gravity="center">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profilePic"
+                    android:layout_width="150dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/baseline_account_circle_24"
+                    app:civ_shadow_radius="10dp"
+                    />
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_below="@+id/Relative_lay"
+                app:errorEnabled="true"
+                app:counterMaxLength="25"
+                app:counterEnabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UserName"
+                    android:hint="Type your name here"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <requestFocus/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="@dimen/_21sdp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+</RelativeLayout>

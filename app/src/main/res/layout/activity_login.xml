@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/AppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/ToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_marginLeft="@dimen/_23sdp"
+                android:textSize="@dimen/_20sdp"
+                android:text="Sign up"
+
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/LoginTxt"
+                android:layout_marginLeft="@dimen/_23sdp"
+
+                android:layout_marginTop="@dimen/_87sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We will send an OTP to your mobile number"
+                >
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:id="@+id/textInputLayout"
+                android:layout_marginTop="@dimen/_109sdp"
+                android:layout_marginLeft="@dimen/_23sdp"
+                android:layout_marginRight="@dimen/_23sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_phone_number"
+                app:startIconDrawable="@drawable/baseline_phone_24"
+                app:helperTextEnabled="true"
+                app:errorEnabled="true"
+                app:prefixText="+91"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+                <requestFocus/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <ProgressBar
+             android:id="@+id/progressbar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/textInputLayout"
+            android:layout_marginTop="@dimen/_65sdp"
+             android:indeterminate="true"
+             android:indeterminateTint="@color/blue"
+             android:layout_centerHorizontal="true"
+             android:visibility="gone"
+             >
+
+         </ProgressBar>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Button"
+                android:textAllCaps="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:layout_width="match_parent"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17sdp"
+                android:layout_height="@dimen/_42sdp">
+            </com.google.android.material.button.MaterialButton>
+
+
+
+</RelativeLayout>

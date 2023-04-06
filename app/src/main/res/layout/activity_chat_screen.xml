@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatScreenActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:layout_margin="0dp"
+
+
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/titleTextSize"
+            app:menu="@menu/chat_screen_icons"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:src="@drawable/circle_user_solid"
+                app:civ_circle_color="@color/white"
+                app:civ_border="false"
+                />
+            <TextView
+                android:id="@+id/UserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_2sdp"
+                >
+
+            </TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="4dp"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:hintAnimationEnabled="true"
+
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:hint="Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="@dimen/_10sdp"
+            tools:ignore="KeyboardInaccessibleWidget" />
+        <requestFocus/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/Send"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/baseline_send_24"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OtpActivity"
+       >
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+<ScrollView
+    android:layout_below="@+id/AppBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Button"
+        android:layout_below="@+id/AppBar"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:layout_marginBottom="@dimen/_23sdp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Please enter the verification code we've sent"
+
+            android:textSize="@dimen/_13sdp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/setTxt"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/Text"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_13sdp" />
+
+        <RelativeLayout
+            android:id="@+id/linearLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_64sdp"
+            android:gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/Txt1"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:maxLength="1"
+                />
+            <requestFocus/>
+            <EditText
+                android:id="@+id/Txt2"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Txt1"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:maxLength="1"
+                />
+            <EditText
+                android:id="@+id/Txt3"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Txt2"
+
+                android:textAlignment="center"
+                android:inputType="number"
+                android:maxLength="1"
+                />
+            <EditText
+                android:id="@+id/Txt4"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Txt3"
+
+                android:textAlignment="center"
+                android:inputType="number"
+                android:maxLength="1"
+                />
+            <EditText
+                android:id="@+id/Txt5"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Txt4"
+
+                android:textAlignment="center"
+                android:inputType="number"
+                android:maxLength="1"
+                />
+            <EditText
+                android:id="@+id/Txt6"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Txt5"
+                android:paddingStart="0dp"
+                android:inputType="number"
+
+                android:textAlignment="center"
+                android:maxLength="1"
+                />
+
+            <EditText
+                android:id="@+id/errorMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Txt1"
+                android:textSize="@dimen/_13sdp"
+                android:backgroundTint="@color/white"
+                android:cursorVisible="false"
+                android:clickable="false"
+                android:focusable="false"
+                />
+
+
+            <EditText
+                android:id="@+id/Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:layout_below="@+id/Txt6"
+                android:layout_alignStart="@+id/Txt6"
+                android:backgroundTint="@color/white"
+                android:cursorVisible="false"
+                android:clickable="false"
+                android:focusable="false"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLay"
+            android:text="@string/didn_t_receive_the_otp_resend"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone"
+
+        >
+
+    </ProgressBar>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Button"
+            android:textAllCaps="false"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_width="match_parent"
+            android:text="Verify"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            >
+        </com.google.android.material.button.MaterialButton>
+
+
+    </RelativeLayout>
+
+
+
+

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChatApplication</string>
+    <string name="camera">camera</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_phone_number">Phone Number</string>
+    <string name="didn_t_receive_the_otp_resend">Didn\'t receive the otp? <font color='#1E88E5'>Resend</font> </string>
+    <string name="name">Name</string>
+    <string name="about">About</string>
+
+
+</resources>
