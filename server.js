@@ -9,7 +9,7 @@ app.get('/',(req,res)=>{
    res.send("Hello folks")
 })
 
-app.post('login',bodyparser.urlencoded({extended:false}),(req,res)=>{
+app.post('/login',bodyparser.urlencoded({extended:false}),(req,res)=>{
   
   res.send("data received")
 })
