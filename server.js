@@ -5,12 +5,12 @@ const port = process.env.PORT || 3000;
 
 
 app.get('/',(req,res)=>{
-   console.log(req.body)
+  
    res.send("Hello folks")
 })
 
-app.get('/getdata',(req,res)=>{
-   res.send("no data available")
+app.post('/login',(req,res)=>{
+  console.log(req.body)
 })
 
 
