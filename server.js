@@ -8,6 +8,9 @@ app.get('/',(req,res)=>{
    res.send("Hello folks")
 })
 
+app.get('/getdata',(req,res)=>{
+   res.send("no data available")
+})
 
 
 
