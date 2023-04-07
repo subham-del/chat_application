@@ -11,6 +11,7 @@ app.get('/',(req,res)=>{
 
 app.post('/login',bodyparser.urlencoded({extended:false}),(req,res)=>{
   console.log(req.body)
+  res.send("data received")
 })
 
 
